@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Poverty in USA 2018</title>
+</head>
+<body>
+    <h2 id='title'>Number of <u>Children</u> in Poverty <br>in the United States (2018)</h2>
+    <div id='container'>
+        <div id='tooltip'></div>
+        <svg id='canvas'></svg>
+        <div id='rightSide'>
+            <svg id='legend'>
+                <g>
+                    <rect x="0" y="0" width="40" height="40" fill="#89CFF0"></rect>
+                    <text x="60" y="25" fill="white"> >= 0     < 468</text>
+                    <text x="12" y="25" fill="white">Q1</text>
+                </g>
+                <g>
+                    <rect x="0" y="40" width="40" height="40" fill="#6CB4EE"></rect>
+                    <text x="60" y="65" fill="white">>= 468 < 1247</text>
+                    <text x="12" y="65" fill="white">Q2</text>
+                </g>
+                <g>
+                    <rect x="0" y="80" width="40" height="40" fill="#318CE7"></rect>
+                    <text x="60" y="105" fill="white">>= 1247 < 3025</text>
+                    <text x="12" y="105" id='lastQ' fill="white">Q3</text>
+                </g>
+                <g>
+                    <rect x="0" y="120" width="40" height="40" fill="#0039a6"></rect>
+                    <text x="60" y="145" fill="white">>= 3025</text>
+                    <text x="12" y="145" id='lastQ' fill="white" color="white">Q4</text>
+                </g>
+            </svg>
+            <div id="description">
+                The color is separated based on the quartiles. <br><br>
+                Most of the counties in the middle has low number of children under poverty.
+                While counties on the east falls in Q2 and above.
+                Counties in the west coast have the most number of children under poverty. 
+                <br><br>
+                Github repository: <a href="https://github.com/BoniOloff/interactive_poverty_choropleth">here.</a><br>
+                Live demo: <a href="https://bonioloff.github.io/interactive_poverty_choropleth/">here.</a>
+            </div>        
+        </div>
+        
+    </div>
+    
+
+</body>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script defer src='script.js'></script>
+</html>
