@@ -1,54 +1,130 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Poverty in USA 2018</title>
+    <title>Exploration of COVID19 Economic Impact on Children</title>
 </head>
 <body>
-    <h2 id='title'>Number of <u>Children</u> in Poverty <br>in the United States (2018)</h2>
+    <h2 id='title'>Exploration of COVID19 Economic Impact on Children</h2>
     <div id='container'>
         <div id='tooltip'></div>
-        <svg id='canvas'></svg>
-        <div id='rightSide'>
-            <svg id='legend'>
-                <g>
-                    <rect x="0" y="0" width="40" height="40" fill="#89CFF0"></rect>
-                    <text x="60" y="25" fill="white"> >= 0     < 468</text>
-                    <text x="12" y="25" fill="white">Q1</text>
-                </g>
-                <g>
-                    <rect x="0" y="40" width="40" height="40" fill="#6CB4EE"></rect>
-                    <text x="60" y="65" fill="white">>= 468 < 1247</text>
-                    <text x="12" y="65" fill="white">Q2</text>
-                </g>
-                <g>
-                    <rect x="0" y="80" width="40" height="40" fill="#318CE7"></rect>
-                    <text x="60" y="105" fill="white">>= 1247 < 3025</text>
-                    <text x="12" y="105" id='lastQ' fill="white">Q3</text>
-                </g>
-                <g>
-                    <rect x="0" y="120" width="40" height="40" fill="#0039a6"></rect>
-                    <text x="60" y="145" fill="white">>= 3025</text>
-                    <text x="12" y="145" id='lastQ' fill="white" color="white">Q4</text>
-                </g>
-            </svg>
-            <div id="description">
-                The color is separated based on the quartiles. <br><br>
-                Most of the counties in the middle has low number of children under poverty.
-                While counties on the east falls in Q2 and above.
-                Counties in the west coast have the most number of children under poverty. 
-                <br><br>
-                Github repository: <a href="https://github.com/BoniOloff/interactive_poverty_choropleth">here.</a><br>
-                Live demo: <a href="https://bonioloff.github.io/interactive_poverty_choropleth/">here.</a>
-            </div>        
+        <h3 id='note'><a href="https://github.com/BoniOloff/final_project_DataViz">GitHub Repo</a>, <a href="https://bonioloff.github.io/final_project_DataViz/">GitHub Page</a>, Data Source: <a href="https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation">CountyHealthRanking.org</a></h3>
+        <h2>During COVID19 Pandemic (2019 to 2021) around <b>1495</b> counties successfully decrease the Children on Poverty.<br> While only <b>964</b> counties getting worse.
+        </h2>
+
+        <div class="grid-example">
+            <svg id='canvas_d'></svg>
+            <div id='rightSide'>
+                <svg id='legend' height='120px'>
+                    <g>
+                        <rect x="0" y="0" width="100" height="40" fill="cornflowerblue"></rect>
+                        <text x="12" y="25" id='lastQ' fill="white">Decrease</text>
+                    </g>
+                    <g>
+                        <rect x="0" y="40" width="100" height="40" fill="royalblue"></rect>
+                        <text x="12" y="65" id='lastQ' fill="white">No Change</text>
+                    </g>
+                    <g>
+                        <rect x="0" y="80" width="100" height="40" fill="darkorange"></rect>
+                        <text x="12" y="105" id='lastQ' fill="white">Increase</text>
+                    </g>
+                </svg>
+            </div>
         </div>
+
+        <h2>During <b>2019</b>, there are <b>285</b> counties has more than 35% of Children on Poverty. </h2>
+        <div class="grid-example">
+            <svg id='canvas_c'></svg>
+            <div id='rightSide'>
+                <svg id='legend' height='200px' width='75px'>
+                    <g>
+                        <rect x="0" y="0" width="100" height="40" fill="#89CFF0"></rect>
+                        <text x="12" y="25"  fill="#89CFF0"><= 15%</text>
+                    </g>
+                    <g>
+                        <rect x="0" y="40" width="100" height="40" fill="#6CB4EE"></rect>
+                        <text x="12" y="65" fill="#6CB4EE"><= 20%</text>
+                    </g>
+                    <g>
+                        <rect x="0" y="80" width="100" height="40" fill="#318CE7"></rect>
+                        <text x="12" y="105" id='lastQ' fill="#318CE7"><= 25%</text>
+                    </g>
+                    <g>
+                        <rect x="0" y="120" width="100" height="40" fill="#0039a6"></rect>
+                        <text x="12" y="145" id='lastQ' fill="#0039a6"><= 35%</text>
+                    </g>
+                    <g>
+                        <rect x="0" y="160" width="100" height="40" fill="red"></rect>
+                        <text x="12" y="185" id='lastQ' fill="red">> 35%</text>
+                    </g>
+                </svg>
+            </div>
+        </div>
+
+        <h2>In <b>2020</b>, there are <b>210</b> counties that consistent with more than 35%.<br>And <b>51</b> more counties enter the list.<br> No East Coast counties has > 35% Children on Poverty in 2020.</h2>
+        <div class="grid-example">
+            <svg id='canvas_b'></svg>
+            <div id='rightSide'>
+                <svg id='legend' height='200px' width='75px'>
+                    <g>
+                        <rect x="0" y="0" width="100" height="40" fill="#89CFF0"></rect>
+                        <text x="12" y="25"  fill="#89CFF0"><= 15%</text>
+                    </g>
+                    <g>
+                        <rect x="0" y="40" width="100" height="40" fill="#6CB4EE"></rect>
+                        <text x="12" y="65" fill="#6CB4EE"><= 20%</text>
+                    </g>
+                    <g>
+                        <rect x="0" y="80" width="100" height="40" fill="#318CE7"></rect>
+                        <text x="12" y="105" id='lastQ' fill="#318CE7"><= 25%</text>
+                    </g>
+                    <g>
+                        <rect x="0" y="120" width="100" height="40" fill="#0039a6"></rect>
+                        <text x="12" y="145" id='lastQ' fill="#0039a6"><= 35%</text>
+                    </g>
+                    <g>
+                        <rect x="0" y="160" width="100" height="40" fill="red"></rect>
+                        <text x="12" y="185" id='lastQ' fill="red">> 35%</text>
+                    </g>
+                </svg>
+            </div>
+        </div>
+
+        <h2>In <b>2021</b> only <b>161</b> counties that consistent with >35% Children on Poverty. <br> Almost <b>half </b>of the counties successfully reduce the poverty from >35% in the COVID19 Era.</h2>
+        <div class="grid-example">
+            <svg id='canvas'></svg>
+            <div id='rightSide'>
+                <svg id='legend' height='200px' width='75px'>
+                    <g>
+                        <rect x="0" y="0" width="100" height="40" fill="#89CFF0"></rect>
+                        <text x="12" y="25"  fill="#89CFF0"><= 15%</text>
+                    </g>
+                    <g>
+                        <rect x="0" y="40" width="100" height="40" fill="#6CB4EE"></rect>
+                        <text x="12" y="65" fill="#6CB4EE"><= 20%</text>
+                    </g>
+                    <g>
+                        <rect x="0" y="80" width="100" height="40" fill="#318CE7"></rect>
+                        <text x="12" y="105" id='lastQ' fill="#318CE7"><= 25%</text>
+                    </g>
+                    <g>
+                        <rect x="0" y="120" width="100" height="40" fill="#0039a6"></rect>
+                        <text x="12" y="145" id='lastQ' fill="#0039a6"><= 35%</text>
+                    </g>
+                    <g>
+                        <rect x="0" y="160" width="100" height="40" fill="red"></rect>
+                        <text x="12" y="185" id='lastQ' fill="red">> 35%</text>
+                    </g>
+                </svg>
+            </div>
+        </div>
+
         
     </div>
-    
 
 </body>
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<!-- <script src="https://unpkg.com/topojson@3"></script> -->
+
 <script defer src='script.js'></script>
 </html>

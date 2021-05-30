@@ -12,20 +12,51 @@ body {
     margin: none;
 }
 
-svg{
+svg {
     background-color: white;
+    /* width: 500px; */
     border-radius: 5px;
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 5px;
+    align-content: center;
+    /* background-color: blue; */
+}
+
+#text_a{
+    color: black;
 }
 
 #canvas{
     min-height: 600px;
     min-width: 950px;
+    align-content: center;
+}
+
+#canvas_b{
+    min-height: 600px;
+    min-width: 950px;
+}
+
+#canvas_c{
+    min-height: 600px;
+    min-width: 950px;
+}
+
+#canvas_d{
+    min-height: 600px;
+    min-width: 950px;
+}
+
+.grid-example {
+    display: grid;
+    grid-template-columns: 1000px 50px;
+    row-gap: 200px;
+    padding: 20px;
+    /* column-gap: 50px; */
 }
 
 .county:hover{
-    fill: black;
+    fill: rgb(85, 79, 79);
 }
 
 g{
@@ -48,32 +79,50 @@ g{
     font-size: small;
 }
 
-#legend{
-    padding: 0;
-    color: white;
-    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
-    font-size: 13px;
-    text-align: right;
-    min-height: 160px;
-    max-width: 160px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-#lastQ{
-    fill: white;
-    color: white;
-}
-
 #title {
     text-align: center;
-    padding-bottom: 0px;
+    padding-bottom: 10px;
     margin: 0 auto;
     color: #121212;
     font-family: nyt-cheltenham,georgia,'times new roman',times,serif;
     font-weight: 400;
     font-size: 30px;
+    font-style: normal;
+}
+
+h2 {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    color: grey;
+    font-family: nyt-cheltenham,georgia,'times new roman',times,serif;
+    font-weight: 400;
+    font-size: 18px;
     font-style: italic;
+}
+
+h2 b {
+    font-size: 25px;
+}
+
+#legend{
+    padding: 0px;
+    /* color: black; */
+    
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    font-size: 13px;
+    /* text-align: center; */
+    font-weight: 600;
+    min-height: 0px;
+    max-width: 100px;
+    margin-top: 100px;
+    margin-bottom: 0px;
+}
+
+#lastQ{
+    fill: white;
+    color: white;
 }
 
 #description a{
@@ -93,12 +142,6 @@ g{
     font-style: italic;
 }
 
-#container{
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
 #rightSide{
     display: flex;
     flex-direction: column;
@@ -106,6 +149,21 @@ g{
     margin-left: 0px;
 }
 
+g{
+    color: black;
+}
+
 text {
     fill: black;
+}
+
+#note {
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: -5px;
+    font-size: 13px;
+    fill: grey;
+    color:black;
+    font-style: italic;
+    font-family: nyt-cheltenham,georgia,'times new roman',times,serif;
 }
